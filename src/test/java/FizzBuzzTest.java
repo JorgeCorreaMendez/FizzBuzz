@@ -1,39 +1,48 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertArrayEquals;
 
 public class FizzBuzzTest {
 
     @Test
-    public void shouldBeArray() {
-        FizzBuzz newFizzBuzz = new FizzBuzz(100);
+    public void shouldBeOne() {
+        FizzBuzz newFizzBuzz = new FizzBuzz(1);
 
-        assertArrayEquals(newFizzBuzz.getNumbers(), new int[100]);
+        assertEquals(newFizzBuzz.getNumber(), 1);
     }
 
     @Test
     public void shouldBeMultipleOf3(){
-        assertEquals(FizzBuzz.isMultipleOf3(3), true);
+        FizzBuzz newFizzBuzz = new FizzBuzz(3);
+
+        assertEquals(newFizzBuzz.isMultipleOf3(), true);
     }
 
     @Test
     public void shouldBeMultipleOf5(){
-        assertEquals(FizzBuzz.isMultipleOf5(5), true);
+        FizzBuzz newFizzBuzz = new FizzBuzz(5);
+
+        assertEquals(newFizzBuzz.isMultipleOf5(), true);
     }
 
     @Test
     public void shouldBeFizz(){
-        assertEquals(FizzBuzz.isFizz(9), "Fizz");
+        FizzBuzz newFizzBuzz = new FizzBuzz(9);
+
+        assertEquals(newFizzBuzz.isFizz(), "Fizz");
     }
 
     @Test
     public void shouldBeBuzz(){
-        assertEquals(FizzBuzz.isBuzz(10), "Buzz");
+        FizzBuzz newFizzBuzz = new FizzBuzz(10);
+
+        assertEquals(newFizzBuzz.isBuzz(), "Buzz");
     }
 
     @Test
     public void shouldBeFizzBuzz(){
-        assertEquals(FizzBuzz.isFizzBuzz(15), "FizzBuzz");
+        FizzBuzz newFizzBuzz = new FizzBuzz(15);
+
+        assertEquals(newFizzBuzz.isFizzBuzz(), "FizzBuzz");
     }
 }

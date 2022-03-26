@@ -1,43 +1,43 @@
 public class FizzBuzz {
-    private int[] numbers;
+    private int number;
 
     public FizzBuzz(int number) {
-        this.numbers = new int[number];
+        this.number = number;
     }
 
-    public int[] getNumbers() {
-        return numbers;
+    public int getNumber() {
+        return number;
     }
 
-    public static boolean isMultipleOf3(int number){
-        if(number % 3 == 0)
+    public boolean isMultipleOf3() {
+        if (number % 3 == 0)
             return true;
 
         return false;
     }
 
-    public static boolean isMultipleOf5(int number){
-        if(number % 5 == 0)
+    public boolean isMultipleOf5() {
+        if (number % 5 == 0)
             return true;
 
         return false;
     }
 
-    public static String isFizz(int number){
-        if(isMultipleOf3(number)) return "Fizz";
+    public String isFizz() {
+        if (isMultipleOf3()) return "Fizz";
 
-        return "";
+        return Integer.toString(number);
     }
 
-    public static String isBuzz(int number){
-        if(isMultipleOf5(number)) return "Buzz";
+    public String isBuzz() {
+        if (isMultipleOf5()) return "Buzz";
 
-        return "";
+        return Integer.toString(number);
     }
 
-    public static String isFizzBuzz(int number){
-        if(isMultipleOf5(number) && isMultipleOf3(number)) return "FizzBuzz";
+    public String isFizzBuzz() {
+        if (isMultipleOf5() && isMultipleOf3()) return "FizzBuzz";
 
-        return "";
+        return Integer.toString(number);
     }
 }
