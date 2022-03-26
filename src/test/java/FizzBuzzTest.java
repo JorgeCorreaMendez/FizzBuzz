@@ -10,4 +10,11 @@ public class FizzBuzzTest {
 
         assertEquals(newFizzBuzz.getNumber(), 1);
     }
+
+    @Test
+    public void shouldBeMultipleOf2(){
+        FizzBuzz newFizzBuzz = new FizzBuzz(2);
+
+        assertEquals(newFizzBuzz.isMultipleOf2(), true);
+    }
 }

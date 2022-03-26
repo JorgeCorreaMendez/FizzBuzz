@@ -9,7 +9,12 @@ public class FizzBuzz {
         return number;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public boolean isMultipleOf2(){
+        if(number % 2 == 0)
+            return true;
+
+        return false;
     }
+
+
 }
