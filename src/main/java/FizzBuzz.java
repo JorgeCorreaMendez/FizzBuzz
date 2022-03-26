@@ -29,5 +29,12 @@ public class FizzBuzz {
         return "";
     }
 
+    public String isBuzz(){
+        if(isMultipleOf5()) return "Buzz";
+
+        return "";
+    }
+
+
 
 }
