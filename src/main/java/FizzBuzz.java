@@ -16,5 +16,12 @@ public class FizzBuzz {
         return false;
     }
 
+    public boolean isMultipleOf5(){
+        if(number % 5 == 0)
+            return true;
+
+        return false;
+    }
+
 
 }
