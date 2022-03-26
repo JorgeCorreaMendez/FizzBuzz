@@ -23,5 +23,11 @@ public class FizzBuzz {
         return false;
     }
 
+    public String isFizz(){
+        if(isMultipleOf3()) return "Fizz";
+
+        return "";
+    }
+
 
 }

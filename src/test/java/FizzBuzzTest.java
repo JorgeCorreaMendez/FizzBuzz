@@ -24,4 +24,11 @@ public class FizzBuzzTest {
 
         assertEquals(newFizzBuzz.isMultipleOf5(), true);
     }
+
+    @Test
+    public void shouldBeFizz(){
+        FizzBuzz newFizzBuzz = new FizzBuzz(9);
+
+        assertEquals(newFizzBuzz.isFizz(), "Fizz");
+    }
 }
