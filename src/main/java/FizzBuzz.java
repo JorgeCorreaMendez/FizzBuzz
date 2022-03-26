@@ -35,6 +35,9 @@ public class FizzBuzz {
         return "";
     }
 
+    public String isFizzBuzz(){
+        if(isMultipleOf5() && isMultipleOf3()) return "FizzBuzz";
 
-
+        return "";
+    }
 }

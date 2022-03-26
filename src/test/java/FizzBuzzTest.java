@@ -38,4 +38,11 @@ public class FizzBuzzTest {
 
         assertEquals(newFizzBuzz.isBuzz(), "Buzz");
     }
+
+    @Test
+    public void shouldBeFizzBuzz(){
+        FizzBuzz newFizzBuzz = new FizzBuzz(15);
+
+        assertEquals(newFizzBuzz.isFizzBuzz(), "FizzBuzz");
+    }
 }
