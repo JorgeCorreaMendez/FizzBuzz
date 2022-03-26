@@ -9,8 +9,8 @@ public class FizzBuzz {
         return number;
     }
 
-    public boolean isMultipleOf2(){
-        if(number % 2 == 0)
+    public boolean isMultipleOf3(){
+        if(number % 3 == 0)
             return true;
 
         return false;

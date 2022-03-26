@@ -12,9 +12,9 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void shouldBeMultipleOf2(){
-        FizzBuzz newFizzBuzz = new FizzBuzz(2);
+    public void shouldBeMultipleOf3(){
+        FizzBuzz newFizzBuzz = new FizzBuzz(3);
 
-        assertEquals(newFizzBuzz.isMultipleOf2(), true);
+        assertEquals(newFizzBuzz.isMultipleOf3(), true);
     }
 }
