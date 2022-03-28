@@ -5,10 +5,6 @@ public class FizzBuzz {
         this.number = number;
     }
 
-    public int getNumber() {
-        return number;
-    }
-
     public boolean isMultipleOf(int multiple) {
         return number % multiple == 0;
     }

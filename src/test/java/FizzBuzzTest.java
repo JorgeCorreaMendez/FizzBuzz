@@ -7,13 +7,6 @@ public class FizzBuzzTest {
     FizzBuzz newFizzBuzz;
 
     @Test
-    public void shouldBeOne() {
-        newFizzBuzz = new FizzBuzz(1);
-
-        assertEquals(1, newFizzBuzz.getNumber());
-    }
-
-    @Test
     public void shouldBeMultipleOf3() {
         newFizzBuzz = new FizzBuzz(3);
 
