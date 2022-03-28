@@ -9,34 +9,37 @@ public class FizzBuzz {
         return number;
     }
 
-    public boolean isMultipleOf3() {
-        if (number % 3 == 0)
-            return true;
-
-        return false;
+    public boolean isMultipleOf(int multiple) {
+        return number % multiple == 0;
     }
 
-    public boolean isMultipleOf5() {
-        if (number % 5 == 0)
-            return true;
-
-        return false;
-    }
 
     public String isFizz() {
-        if (isMultipleOf3()) return "Fizz";
+        if (isMultipleOf(3)) return "Fizz";
 
         return Integer.toString(number);
     }
 
     public String isBuzz() {
-        if (isMultipleOf5()) return "Buzz";
+        if (isMultipleOf(5)) return "Buzz";
 
         return Integer.toString(number);
     }
 
     public String isFizzBuzz() {
-        if (isMultipleOf5() && isMultipleOf3()) return "FizzBuzz";
+        if (isMultipleOf(3) && isMultipleOf(5)) return "FizzBuzz";
+
+        return Integer.toString(number);
+    }
+
+    public String whatIs() {
+        if (isMultipleOf(3) && isMultipleOf(5)) {
+            return "FizzBuzz";
+        } else if (isMultipleOf(3)) {
+            return "Fizz";
+        } else if (isMultipleOf(5)) {
+            return "Buzz";
+        }
 
         return Integer.toString(number);
     }
