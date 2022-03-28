@@ -13,7 +13,6 @@ public class FizzBuzz {
         return number % multiple == 0;
     }
 
-
     public String isFizz() {
         if (isMultipleOf(3)) return "Fizz";
 
@@ -35,12 +34,19 @@ public class FizzBuzz {
     public String whatIs() {
         if (isMultipleOf(3) && isMultipleOf(5)) {
             return "FizzBuzz";
-        } else if (isMultipleOf(3)) {
+        } else if (isMultipleOf(3) || contains(3)) {
             return "Fizz";
-        } else if (isMultipleOf(5)) {
+        } else if (isMultipleOf(5) || contains(5)) {
             return "Buzz";
         }
 
         return Integer.toString(number);
+    }
+
+    public boolean contains(int searchNumber){
+        String worldToSearch = Integer.toString(searchNumber);
+        String numberString = Integer.toString(number);
+
+        return numberString.contains(worldToSearch);
     }
 }

@@ -3,56 +3,72 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-
 public class FizzBuzzTest {
+    FizzBuzz newFizzBuzz;
 
     @Test
     public void shouldBeOne() {
-        FizzBuzz newFizzBuzz = new FizzBuzz(1);
+        newFizzBuzz = new FizzBuzz(1);
 
-        assertEquals(newFizzBuzz.getNumber(), 1);
+        assertEquals(1, newFizzBuzz.getNumber());
     }
 
     @Test
     public void shouldBeMultipleOf3() {
-        FizzBuzz newFizzBuzz = new FizzBuzz(3);
+        newFizzBuzz = new FizzBuzz(3);
 
         assertTrue(newFizzBuzz.isMultipleOf(3));
     }
 
     @Test
     public void shouldBeMultipleOf5() {
-        FizzBuzz newFizzBuzz = new FizzBuzz(5);
+        newFizzBuzz = new FizzBuzz(5);
 
         assertTrue(newFizzBuzz.isMultipleOf(5));
     }
 
     @Test
     public void shouldBeFizz() {
-        FizzBuzz newFizzBuzz = new FizzBuzz(9);
+        newFizzBuzz = new FizzBuzz(9);
 
-        assertEquals(newFizzBuzz.isFizz(), "Fizz");
+        assertEquals("Fizz", newFizzBuzz.isFizz());
     }
 
     @Test
     public void shouldBeBuzz() {
-        FizzBuzz newFizzBuzz = new FizzBuzz(10);
+        newFizzBuzz = new FizzBuzz(10);
 
-        assertEquals(newFizzBuzz.isBuzz(), "Buzz");
+        assertEquals("Buzz", newFizzBuzz.isBuzz());
     }
 
     @Test
     public void shouldBeFizzBuzz() {
-        FizzBuzz newFizzBuzz = new FizzBuzz(15);
+        newFizzBuzz = new FizzBuzz(15);
 
-        assertEquals(newFizzBuzz.isFizzBuzz(), "FizzBuzz");
+        assertEquals("FizzBuzz", newFizzBuzz.isFizzBuzz());
+    }
+
+    @Test
+    public void shouldHaveThree() {
+        newFizzBuzz = new FizzBuzz(13);
+
+        assertTrue(newFizzBuzz.contains(3));
+    }
+
+    @Test
+    public void shouldHaveFive() {
+        newFizzBuzz = new FizzBuzz(59);
+
+        assertTrue(newFizzBuzz.contains(5));
     }
 
     @Test
     public void shouldBeAny() {
-        assertEquals(new FizzBuzz(1).whatIs(), "1");
-        assertEquals(new FizzBuzz(9).whatIs(), "Fizz");
-        assertEquals(new FizzBuzz(10).whatIs(), "Buzz");
-        assertEquals(new FizzBuzz(15).whatIs(), "FizzBuzz");
+        assertEquals("1", new FizzBuzz(1).whatIs());
+        assertEquals("Fizz", new FizzBuzz(9).whatIs());
+        assertEquals("Buzz", new FizzBuzz(10).whatIs());
+        assertEquals("FizzBuzz", new FizzBuzz(15).whatIs());
+        assertEquals("Fizz", new FizzBuzz(13).whatIs());
+        assertEquals("Buzz", new FizzBuzz(56).whatIs());
     }
 }
