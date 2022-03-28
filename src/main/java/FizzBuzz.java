@@ -28,13 +28,9 @@ public class FizzBuzz {
     }
 
     public String whatIs() {
-        if (isMultipleOf(3) && isMultipleOf(5)) {
-            return "FizzBuzz";
-        } else if (isMultipleOf(3) || contains(3)) {
-            return "Fizz";
-        } else if (isMultipleOf(5) || contains(5)) {
-            return "Buzz";
-        }
+        if (isMultipleOf(3) && isMultipleOf(5)) return "FizzBuzz";
+        if (isMultipleOf(3) || contains(3)) return "Fizz";
+        if (isMultipleOf(5) || contains(5)) return "Buzz";
 
         return Integer.toString(number);
     }
