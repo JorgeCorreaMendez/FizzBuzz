@@ -3,22 +3,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+
 public class FizzBuzzTest {
     FizzBuzz newFizzBuzz;
-
-    @Test
-    public void shouldBeMultipleOf3() {
-        newFizzBuzz = new FizzBuzz(3);
-
-        assertTrue(newFizzBuzz.isMultipleOf(3));
-    }
-
-    @Test
-    public void shouldBeMultipleOf5() {
-        newFizzBuzz = new FizzBuzz(5);
-
-        assertTrue(newFizzBuzz.isMultipleOf(5));
-    }
 
     @Test
     public void shouldBeFizz() {
