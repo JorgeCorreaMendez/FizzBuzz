@@ -2,8 +2,6 @@ import org.junit.Test;
 import wrapper.FizzBuzzInt;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 
 public class FizzBuzzTest {
     FizzBuzz newFizzBuzz;
@@ -27,20 +25,6 @@ public class FizzBuzzTest {
         newFizzBuzz = new FizzBuzz(new FizzBuzzInt(15));
 
         assertEquals("FizzBuzz", newFizzBuzz.isFizzBuzz());
-    }
-
-    @Test
-    public void shouldHaveThree() {
-        newFizzBuzz = new FizzBuzz(new FizzBuzzInt(13));
-
-        assertTrue(newFizzBuzz.contains(3));
-    }
-
-    @Test
-    public void shouldHaveFive() {
-        newFizzBuzz = new FizzBuzz(new FizzBuzzInt(59));
-
-        assertTrue(newFizzBuzz.contains(5));
     }
 
     @Test
