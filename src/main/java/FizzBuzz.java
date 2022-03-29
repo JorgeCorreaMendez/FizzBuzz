@@ -1,43 +1,41 @@
+import wrapper.FizzBuzzInt;
+
 public class FizzBuzz {
-    private int number;
+    private FizzBuzzInt number;
 
     public FizzBuzz(int number) {
-        this.number = number;
-    }
-
-    public boolean isMultipleOf(int multiple) {
-        return number % multiple == 0;
+        this.number = new FizzBuzzInt(number);
     }
 
     public String isFizz() {
-        if (isMultipleOf(3)) return "Fizz";
+        if (number.isMultipleOf(3)) return "Fizz";
 
-        return Integer.toString(number);
+        return number.toString();
     }
 
     public String isBuzz() {
-        if (isMultipleOf(5)) return "Buzz";
+        if (number.isMultipleOf(5)) return "Buzz";
 
-        return Integer.toString(number);
+        return number.toString();
     }
 
     public String isFizzBuzz() {
-        if (isMultipleOf(3) && isMultipleOf(5)) return "FizzBuzz";
+        if (number.isMultipleOf(3) && number.isMultipleOf(5)) return "FizzBuzz";
 
-        return Integer.toString(number);
+        return number.toString();
     }
 
     public String whatIs() {
-        if (isMultipleOf(3) && isMultipleOf(5)) return "FizzBuzz";
-        if (isMultipleOf(3) || contains(3)) return "Fizz";
-        if (isMultipleOf(5) || contains(5)) return "Buzz";
+        if (number.isMultipleOf(3) && number.isMultipleOf(5)) return "FizzBuzz";
+        if (number.isMultipleOf(3) || contains(3)) return "Fizz";
+        if (number.isMultipleOf(5) || contains(5)) return "Buzz";
 
-        return Integer.toString(number);
+        return number.toString();
     }
 
-    public boolean contains(int searchNumber){
+    public boolean contains(int searchNumber) {
         String worldToSearch = Integer.toString(searchNumber);
-        String numberString = Integer.toString(number);
+        String numberString = number.toString();
 
         return numberString.contains(worldToSearch);
     }
