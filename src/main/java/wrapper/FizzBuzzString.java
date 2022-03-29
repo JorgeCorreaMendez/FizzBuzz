@@ -1,16 +1,14 @@
 package wrapper;
 
 public class FizzBuzzString {
-    private String text;
+    private final String text;
 
     public FizzBuzzString(String text) {
         this.text = text;
     }
 
-    public boolean contains(FizzBuzzInt searchNumber) {
-        String worldToSearch = searchNumber.toString();
-
-        return text.contains(worldToSearch);
+    public boolean contains(int searchNumber) {
+        return text.contains(Integer.toString(searchNumber));
     }
 
     @Override

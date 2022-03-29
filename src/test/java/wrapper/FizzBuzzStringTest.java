@@ -12,18 +12,15 @@ public class FizzBuzzStringTest {
     @Test
     public void shouldHaveThree() {
         newFizzBuzzString = new FizzBuzzString("13");
-        newFizzBuzzInt = new FizzBuzzInt(3);
 
-
-        assertTrue(newFizzBuzzString.contains(newFizzBuzzInt));
+        assertTrue(newFizzBuzzString.contains(3));
     }
 
     @Test
     public void shouldHaveFive() {
         newFizzBuzzString = new FizzBuzzString("59");
-        newFizzBuzzInt = new FizzBuzzInt(5);
 
-        assertTrue(newFizzBuzzString.contains(newFizzBuzzInt));
+        assertTrue(newFizzBuzzString.contains(5));
     }
 
     @Test
