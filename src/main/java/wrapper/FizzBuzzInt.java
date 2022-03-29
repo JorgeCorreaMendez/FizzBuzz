@@ -7,5 +7,12 @@ public class FizzBuzzInt {
         this.number = number;
     }
 
+    public boolean isMultipleOf(int multiple) {
+        return number % multiple == 0;
+    }
 
+    @Override
+    public String toString() {
+        return Integer.toString(number);
+    }
 }
