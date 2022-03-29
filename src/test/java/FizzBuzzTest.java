@@ -1,67 +1,51 @@
 import org.junit.Test;
+import wrapper.FizzBuzzInt;
+import wrapper.FizzBuzzString;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class FizzBuzzTest {
-    FizzBuzz newFizzBuzz;
+    FizzBuzzString newFizzBuzzString;
 
     @Test
-    public void shouldBeMultipleOf3() {
-        newFizzBuzz = new FizzBuzz(3);
+    public void shouldBeNumberString(){
+        newFizzBuzzString = new FizzBuzz(new FizzBuzzInt(1)).whatIs();
 
-        assertTrue(newFizzBuzz.isMultipleOf(3));
+        assertEquals("1", newFizzBuzzString.toString());
     }
 
     @Test
-    public void shouldBeMultipleOf5() {
-        newFizzBuzz = new FizzBuzz(5);
+    public void shouldBeFizz(){
+        newFizzBuzzString = new FizzBuzz(new FizzBuzzInt(3)).whatIs();
 
-        assertTrue(newFizzBuzz.isMultipleOf(5));
+        assertEquals("Fizz", newFizzBuzzString.toString());
     }
 
     @Test
-    public void shouldBeFizz() {
-        newFizzBuzz = new FizzBuzz(9);
+    public void shouldBeBuzz(){
+        newFizzBuzzString = new FizzBuzz(new FizzBuzzInt(5)).whatIs();
 
-        assertEquals("Fizz", newFizzBuzz.isFizz());
+        assertEquals("Buzz", newFizzBuzzString.toString());
     }
 
     @Test
-    public void shouldBeBuzz() {
-        newFizzBuzz = new FizzBuzz(10);
+    public void shouldBeFizzBuzz(){
+        newFizzBuzzString = new FizzBuzz(new FizzBuzzInt(15)).whatIs();
 
-        assertEquals("Buzz", newFizzBuzz.isBuzz());
+        assertEquals("FizzBuzz", newFizzBuzzString.toString());
     }
 
     @Test
-    public void shouldBeFizzBuzz() {
-        newFizzBuzz = new FizzBuzz(15);
+    public void shouldBeBuzzBecauseContainsThree() {
+        newFizzBuzzString = new FizzBuzz(new FizzBuzzInt(13)).whatIs();
 
-        assertEquals("FizzBuzz", newFizzBuzz.isFizzBuzz());
+        assertEquals("Fizz", newFizzBuzzString.toString());
     }
 
     @Test
-    public void shouldHaveThree() {
-        newFizzBuzz = new FizzBuzz(13);
+    public void shouldBeBuzzBecauseContainsFive() {
+        newFizzBuzzString = new FizzBuzz(new FizzBuzzInt(59)).whatIs();
 
-        assertTrue(newFizzBuzz.contains(3));
-    }
-
-    @Test
-    public void shouldHaveFive() {
-        newFizzBuzz = new FizzBuzz(59);
-
-        assertTrue(newFizzBuzz.contains(5));
-    }
-
-    @Test
-    public void shouldBeAny() {
-        assertEquals("1", new FizzBuzz(1).whatIs());
-        assertEquals("Fizz", new FizzBuzz(9).whatIs());
-        assertEquals("Buzz", new FizzBuzz(10).whatIs());
-        assertEquals("FizzBuzz", new FizzBuzz(15).whatIs());
-        assertEquals("Fizz", new FizzBuzz(13).whatIs());
-        assertEquals("Buzz", new FizzBuzz(56).whatIs());
+        assertEquals("Buzz", newFizzBuzzString.toString());
     }
 }
