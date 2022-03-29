@@ -3,8 +3,8 @@ import wrapper.FizzBuzzInt;
 public class FizzBuzz {
     private FizzBuzzInt number;
 
-    public FizzBuzz(int number) {
-        this.number = new FizzBuzzInt(number);
+    public FizzBuzz(FizzBuzzInt number) {
+        this.number = number;
     }
 
     public String isFizz() {
